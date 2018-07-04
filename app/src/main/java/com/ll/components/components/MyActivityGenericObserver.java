@@ -9,6 +9,6 @@ import android.util.Log;
 public class MyActivityGenericObserver implements GenericLifecycleObserver {
     @Override
     public void onStateChanged(LifecycleOwner owner, Lifecycle.Event event) {
-        Log.e("TAG-----"+ event.name().toLowerCase(), event.name() + " , " + owner.getClass().getSimpleName() + " , " + getClass().getSimpleName().toLowerCase());
+        Log.e("TAG"+ event.name().toLowerCase(), event.name() + " , " + owner.getClass().getSimpleName() + " , " + getClass().getSimpleName());
     }
 }

@@ -6,12 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
-    private static final String REPORT_FRAGMENT_TAG = "com.ll.components"
-            + ".LifecycleDispatcher.report_fragment_tag";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getLifecycle().addObserver(new MyActivityObserver());
         getLifecycle().addObserver(new MyActivityGenericObserver());
         addFragment();
     }
